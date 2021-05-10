@@ -1,0 +1,12 @@
+.img-land img{
+    width:500px;
+    height: auto;
+    
+}
+.panel-h3-heading{
+    display: inline-block;
+}
+.addNew{
+    float: right;
+    margin: 10px;    
+}

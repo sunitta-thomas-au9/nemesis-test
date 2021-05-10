@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+.main-continer {
+  background: rgb(233, 217, 217);
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+.form-class {
+  padding: 1%;
+  width:50%;
+  height: 90%;
+  background-color: #E0F4FF;
+  box-shadow: 0 4px 8px 0 rgb(228, 216, 196), 0 6px 20px 0 rgb(204, 200, 200);
+  margin: 5% auto;
+  border-radius: 15px;
+}
+.font-size {
+  font-weight: 600;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #0b5b74;
+} 
+.form-data{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5%;
+}
+
+.error-display{
+  color: red;
+  font-size: smaller;
+  
+}
+
+.authBtn1 {
+  background-color: white;
+  font-weight: bolder;
+  text-align: center;
+  width: 55%;
+}
+
+.authBtn1 > a {
+  text-decoration: none;
+}
+
+.authBtn2 {
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  width: 55%;
+}
+
+@media only screen and (max-width: 640px) {
+  .form-class {
+    width: 90%;
+  }
+
+  .authBtn1 {
+    width: 55%;
+  }
+
+  .authBtn2 {
+    width: 55%;
+  }
+}

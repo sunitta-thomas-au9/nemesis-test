@@ -1,0 +1,25 @@
+.outer{
+    position: relative;
+    display: inline-block;
+}
+.outer .selection{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    width: 60%;
+}
+.img-land{
+    margin:10px
+}
+h2{
+    color: tomato;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+    color: rgb(76, 76, 218);
+    font-weight: 800;
+}
