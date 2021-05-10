@@ -6,13 +6,51 @@ const updateUrl = "http://localhost:9800/users";
 
 class GetUser extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             userDetails:'',
-            image:''
+            image:'',
+            logginStatus: true
         }
+        this.events = [
+            "load",
+            "mousemove",
+            "mousedown",
+            "click",
+            "scroll",
+            "keypress"
+          ];
+
+        this.handleLogOut = this.handleLogOut.bind(this);
+        this.resetTimeout = this.resetTimeout.bind(this);
+        for (var i in this.events) {
+            window.addEventListener(this.events[i], this.resetTimeout);
+          }
+      
+          this.setTimeout();
     }
+
+    clearTimeout = () => {
+   
+        if (this.logoutTimeout) clearTimeout(this.logoutTimeout);
+    }
+    
+    setTimeout = () => {   
+        this.logoutTimeout = setTimeout(this.handleLogOut, 2 * 60 * 1000);
+    }
+    
+    resetTimeout = () => {
+        console.log("reSet")
+        this.clearTimeout();
+        this.setTimeout();
+    }
+    
+    //   warn = () => {
+    //     alert("You will be logged out automatically in 1 minute.");
+    // }
+    
+    
 
     componentDidMount() {
         const token = sessionStorage.getItem('token');
@@ -141,6 +179,7 @@ class GetUser extends React.Component {
         sessionStorage.removeItem('userName')
         sessionStorage.removeItem('userDetails')
         sessionStorage.removeItem('loggedInEmail')
+        this.setState({ logginStatus: false });
         this.props.history.push('/signin')
     }
     render() {
